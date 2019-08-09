@@ -21,6 +21,32 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: "/detail/:id",
+      name: "detail",
+      // route level code-splitting
+      // this generates a separate chunk (detail.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "detail" */ "./views/Detail.vue")
+    },
+    {
+      path: "/post",
+      name: "post",
+      // route level code-splitting
+      // this generates a separate chunk (post.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "post" */ "./views/Post.vue")
+    },
+    {
+      path: "/camera",
+      name: "camera",
+      // route level code-splitting
+      // this generates a separate chunk (post.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "post" */ "./views/Camera.vue")
     }
   ]
 });

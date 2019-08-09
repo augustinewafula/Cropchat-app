@@ -1,5 +1,5 @@
 # vue-cropchat
-
+A simple vue js app with firebase db
 ## Project setup
 ```
 npm install
@@ -25,5 +25,3 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

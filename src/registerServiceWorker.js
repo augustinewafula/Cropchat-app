@@ -31,4 +31,18 @@ if (process.env.NODE_ENV === "production") {
       console.error("Error during service worker registration:", error);
     }
   });
+  [
+    {
+      urlPattern: /^https:\/\/thecatapi\.com\/v1\/images\/get\.php\?id/,
+      handler: "cacheFirst"
+    },
+    {
+      urlPattern: /^https:\/\/(\d+)\.media\.tumblr\.com\//,
+      handler: "cacheFirst"
+    },
+    {
+      urlPattern: /^http:\/\/(\d+)\.media\.tumblr\.com\//,
+      handler: "cacheFirst"
+    }
+  ];
 }
